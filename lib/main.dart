@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Personal Expenses',
-      theme: ThemeData(primarySwatch: Colors.amber),
+      theme: ThemeData(primarySwatch: Colors.amber, accentColor: Colors.lightBlueAccent),
       home: MyHomePage(),
     );
   }
@@ -77,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Chart(_recentTransactions),
             TransactionList(_Transactions),
