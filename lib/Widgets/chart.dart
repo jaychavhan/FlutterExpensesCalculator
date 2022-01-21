@@ -12,8 +12,8 @@ class Chart extends StatelessWidget {
       var totalSum = 0.0;
       for (var i = 0; i < recentTransaction.length; i++) {
         if (recentTransaction[i].date.day == weekday.day &&
-            recentTransaction[i].date.day == weekday.month &&
-            recentTransaction[i].date.day == weekday.year) {
+            recentTransaction[i].date.month == weekday.month &&
+            recentTransaction[i].date.year == weekday.year) {
               totalSum += recentTransaction[i].amount;
             }
       }
