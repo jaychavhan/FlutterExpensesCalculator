@@ -45,6 +45,12 @@ class _NewTransactionState extends State<NewTransaction> {
               keyboardType: TextInputType.numberWithOptions(decimal: true),
               onSubmitted: (_) => submitData(),
             ),
+            Row(
+              children: [
+                Text('no date'),
+                FlatButton(onPressed: (){}, child: Text('choose date'))
+              ],
+            ),
             FlatButton(
               onPressed: submitData,
               child: Text("Add Transaction"),
